@@ -29,9 +29,33 @@ public class Bruteforce_1 {
         System.out.println(maxSum);
 
     }
+
+    public static  void BetterApproach1(int[] arr , int k){
+
+        int l = 0;
+        int r = 0;
+        int Maxsum = 0;
+        int sum = 0;
+        int n = arr.length;
+
+        while(r < n - 1){
+            sum = sum + arr[r];
+            while(sum > k){
+                sum = sum - arr[l];
+                l++;
+            }
+            if(sum <= k){
+                Maxsum = Math.max(Maxsum, sum);
+            }
+            r++;
+
+        }
+    }
+
     public static void main(String[] args) {
-        int[] arr = {6,1,-9,11,8,9,17,23};
-        int k = 47;
+        int[] arr = {2,5,1,10,10};
+        int k = 14;
         Approach1(arr, k);
+        BetterApproach1(arr, k);
     }
 }
