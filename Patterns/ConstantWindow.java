@@ -23,8 +23,8 @@ public class ConstantWindow {
         return Maxsum;
     }
     public static void main(String[] args) {
-        int[] arr = {-1, 6, 3, 2, 4, 2};
-        int k = 4;
+        int[] arr = {100, 200, 300, 400};
+        int k = 2;
 
         int res = ConstantWindoww(arr, k);
         System.out.println(res);
